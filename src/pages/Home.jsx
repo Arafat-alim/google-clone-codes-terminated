@@ -5,6 +5,7 @@ const Home = () => {
     <div className="home">
       <div className="home__header">
         <div className="header__left">
+          <p>Hello</p>
           {/* link  Router*/}
           {/* link Router */}
         </div>
