@@ -2,6 +2,7 @@ import React from "react";
 import "./search.css";
 import SearchIcon from "@material-ui/icons/Search";
 import MicIcon from "@material-ui/icons/Mic";
+import { Button } from "@material-ui/core";
 
 const Search = () => {
   return (
@@ -10,6 +11,10 @@ const Search = () => {
         <SearchIcon className="search__inputicon" />
         <input />
         <MicIcon />
+      </div>
+      <div className="search_buttons">
+        <Button variant="outlined">Google Search</Button>
+        <Button variant="outlined">I'm Feeling Lucky</Button>
       </div>
     </div>
   );
