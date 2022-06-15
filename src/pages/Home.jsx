@@ -28,7 +28,7 @@ const Home = () => {
           alt="google-logo"
         />
         <div className="home__inputContainer">
-          <Search />
+          <Search hidebuttons />
         </div>
       </div>
     </div>

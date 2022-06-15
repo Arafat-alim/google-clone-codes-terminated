@@ -53,3 +53,8 @@
   color: #222;
   border: 1px solid #c6c6c6;
 }
+
+.search__buttonshidden {
+  display: none !important;
+  /* Hiding property */
+}
