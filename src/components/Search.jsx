@@ -4,13 +4,9 @@ import SearchIcon from "@material-ui/icons/Search";
 import MicIcon from "@material-ui/icons/Mic";
 import { Button } from "@material-ui/core";
 import { useNavigate } from "react-router-dom";
-import { useStateValue } from "./StateProvider";
-import { actionTypes } from "./reducer";
 
 const Search = ({ hidebuttons = false }) => {
   //state management Redux
-  // eslint-disable-next-line no-empty-pattern
-  const [state, dispatch] = useStateValue();
 
   //creating a state
   const [input, setInput] = useState("");
@@ -19,10 +15,6 @@ const Search = ({ hidebuttons = false }) => {
   const search = (e) => {
     e.preventDefault();
     console.log("You have hit the search button >>>", input);
-    dispatch({
-      type: actionTypes.SET_SEARCH_TERM,
-      term: input,
-    });
 
     history("/search");
     // history.push("/search");
@@ -36,7 +28,7 @@ const Search = ({ hidebuttons = false }) => {
         <MicIcon />
       </div>
       {!hidebuttons ? (
-        <div className="search_buttons">
+        <div className="search_buttons ">
           <Button type="submit" onClick={search} variant="outlined">
             Google Search
           </Button>
@@ -54,7 +46,7 @@ const Search = ({ hidebuttons = false }) => {
           </Button>
           <Button
             className="search__buttonshidden"
-            onClick={search}
+            onClick={() => {}}
             variant="outlined"
           >
             I'm Feeling Lucky
