@@ -10,7 +10,7 @@ import { actionTypes } from "./reducer";
 const Search = ({ hidebuttons = false }) => {
   //state management Redux
   // eslint-disable-next-line no-empty-pattern
-  const [{}, dispatch] = useStateValue();
+  const [state, dispatch] = useStateValue();
 
   //creating a state
   const [input, setInput] = useState("");
