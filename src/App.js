@@ -2,13 +2,14 @@ import "./App.css";
 import Home from "./pages/Home";
 //! adding dependencies
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import SearchPage from "./components/SearchPage";
 
 function App() {
   return (
     <div className="app">
       <Router>
         <Routes>
-          <Route path="/search" element={<h2>This is the result page</h2>} />
+          <Route path="/search" element={<SearchPage />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </Router>

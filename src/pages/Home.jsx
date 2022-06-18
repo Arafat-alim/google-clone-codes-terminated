@@ -18,8 +18,6 @@ const Home = () => {
           <Link to="/images">Images</Link>
           <AppsIcon />
           <Avatar />
-          {/* icon Material UI */}
-          {/* Avatar Material UI */}
         </div>
       </div>
       <div className="home__body">

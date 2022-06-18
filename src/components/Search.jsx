@@ -4,12 +4,12 @@ import SearchIcon from "@material-ui/icons/Search";
 import MicIcon from "@material-ui/icons/Mic";
 import { Button } from "@material-ui/core";
 import { useNavigate } from "react-router-dom";
-import { actionTypes } from "../reducer";
-import { useStateValue } from "../StateProvider";
+// import { actionTypes } from "../reducer";
+// import { useStateValue } from "../StateProvider";
 
 const Search = ({ hidebuttons = false }) => {
   //state management Redux
-  const [{}, dispatch] = useStateValue();
+  // const [{}, dispatch] = useStateValue();
   //creating a state
   const [input, setInput] = useState("");
   const history = useNavigate();
@@ -17,10 +17,10 @@ const Search = ({ hidebuttons = false }) => {
   const search = (e) => {
     e.preventDefault();
     console.log("You have hit the search button >>>", input);
-    dispatch({
-      type: actionTypes.SET_SEARCH_TERM,
-      term: input,
-    });
+    // dispatch({
+    //   type: actionTypes.SET_SEARCH_TERM,
+    //   term: input,
+    // });
 
     history("/search");
     // history.push("/search");
